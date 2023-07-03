@@ -33,6 +33,7 @@ public class ItemController {
 
     @PostMapping("/exchange-call")
     public ItemResponseDto exchangeCall(@RequestHeader("X-Authorization") String token, @RequestBody UserRequestDto requestDto) {
+        // @RequestHeader("X-Authorization") : header에 주어진 key 값 반환
         return itemService.exchangeCall(token, requestDto);
     }
 }
